@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 204, 255);
+    padding: 10px;
+
+}
+
+.logo h1 {
+    color: white;
+}
+
+input {
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    width: 16%;
+}
+
+.links a{
+    text-decoration: none;
+    color: white;
+}
+
+.hero {
+    height: 500px;
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: xx-large;
+}
+
+#explore-button {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#explore-button:hover {
+    background-color: aqua;
+}
+
+.login-reg input{
+    background-color: rgb(0, 91, 91);
+    color: white;
+    border-radius: 5px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.card {
+    height: 300px;
+    width: 20%;
+    border: none;
+    box-shadow: 3px 3px 3px 3px rgb(213, 182, 182);
+    border-radius: 10px;
+    margin: 20px 0px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.card p {
+    padding: 0 10px;
+    text-align: justify;
+    margin-top: 5px;
+}
+
+.card h4 {
+    display: inline-block;
+    background-color: #2E8B57;  
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card h4:hover {
+    background-color: #246b45; 
+}
+
+main h2 {
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+#expand-button {
+    margin: 10px auto;
+    padding: 15px;
+    display: block;
+    background-color: black;
+    color: white;
+}
+
+
+
+.footer {
+    background-color: #252826;  
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+    border-top: 3px solid #000000; 
+
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Registration form */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffffcc;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #222;
+}
+
+input[type="text"], input[type="tel"], input[type="password"], select, textarea {
+    padding: 10px 12px;
+    border: 1px solid #cfcfcf;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="password"]:focus, select:focus, textarea:focus {
+    border-color: #00ccff;
+    box-shadow: 0 0 0 3px rgba(0,204,255,0.12);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Login specific tweaks (uses same container/form styles as registration) */
+.small-link {
+    color: #00a3c4;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.small-link:hover {
+    text-decoration: underline;
+}
+
+/* Make full-width buttons stack nicely on mobile */
+@media (max-width: 420px) {
+    .submit-row button {
+        width: 100%;
+    }
+    .submit-row {
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.required {
+    color: #d9534f;
+    margin-left: 6px;
+    font-weight: 700;
+}
+
+.submit-row {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.btn {
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: #00ccff;
+    color: #023a3a;
+}
+
+.btn-secondary {
+    background: #f0f0f0;
+    color: #333;
+}
+
+.note {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.error {
+    color: #b00020;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+@media (max-width: 700px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    .submit-row {
+        justify-content: stretch;
+        flex-direction: column-reverse;
+    }
+}

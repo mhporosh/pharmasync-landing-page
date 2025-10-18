@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PharmaSync — Login</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+<body>
+    <header>
+        <div class="nav">
+      <div class="logo">
+        <h1>PharmaSync</h1>
+      </div>
+      <div class="search">
+        <input
+          type="text"
+          placeholder="search anything"
+          size="30"
+          name=""
+          id="search-box"
+        />
+        <input type="submit" value="search" id="search-button" />
+      </div>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="profile">
+        <img src="images/profile.png" alt="profile" height="30px">
+      </div>
+    </div>
+    </header>
+
+    <main>
+        <div class="container" role="main">
+            <h2 style="text-align:center; margin-bottom:12px;">Login to PharmaSync</h2>
+            <p class="note">Enter your credentials to access your pharmacy dashboard. Don't have an account? <a href="registration.html">Register here</a>.</p>
+
+            <form id="loginForm" novalidate>
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label for="email">Email or Phone <span class="required">*</span></label>
+                        <input id="email" name="email" type="text" placeholder="you@example.com or 01XXXXXXXXX" required aria-required="true">
+                        <div class="error" id="err-email" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="password">Password <span class="required">*</span></label>
+                        <input id="password" name="password" type="password" placeholder="Enter your password" required aria-required="true">
+                        <div class="error" id="err-password" aria-live="polite"></div>
+                    </div>
+
+                    <div class="form-group" style="align-items:flex-start;">
+                        <label><input type="checkbox" id="remember"> Remember me</label>
+                    </div>
+
+                    <div class="form-group" style="text-align:right;">
+                        <a href="#" class="small-link">Forgot password?</a>
+                    </div>
+                </div>
+
+                <div class="submit-row">
+                    <button type="button" class="btn btn-secondary" id="backBtn" onclick="window.location='index.html'">Back</button>
+                    <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+      <div class="footer">
+    <p>&copy; 2025 PharmaSync Ltd. All rights reserved.</p>
+    <p>Contact us: contact.pharmasync@gmail.com | +8801716008149</p>
+</div>
+
+    </footer>
+       
+</body>
+</html>

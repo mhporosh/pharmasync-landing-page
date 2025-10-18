@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>PharmaSync — Registration</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="nav">
+			<div class="logo">
+				<h1>PharmaSync</h1>
+			</div>
+			<div class="search">
+				<input type="text" placeholder="search anything" size="30" id="search-box" />
+				<input type="submit" value="search" id="search-button" />
+			</div>
+			<div class="links">
+				<a href="index.html">Home</a>
+				<a href="#">Features</a>
+				<a href="#">About</a>
+				<a href="#">Contact</a>
+			</div>
+			<div class="profile">
+				<img src="images/profile.png" alt="profile" height="30">
+			</div>
+		</div>
+	</header>
+
+	<main>
+
+		<div class="container" role="main">
+			<h2 style="text-align:center; margin-bottom:12px;">Register your Pharmacy</h2>
+			<p class="note">Please fill out the form below. Fields marked with <span class="required">*</span> are required. Already registered? <a href="login.html">Login here</a>.</p>
+
+			<form id="regForm" novalidate>
+				<div class="form-grid">
+					<div class="form-group">
+						<label for="fullName">Full Name <span class="required">*</span></label>
+						<input id="fullName" name="fullName" type="text" placeholder="Enter your full name" required aria-required="true">
+						<div class="error" id="err-fullName" aria-live="polite"></div>
+					</div>
+
+					<div class="form-group">
+						<label for="phone">Phone Number <span class="required">*</span></label>
+						<input id="phone" name="phone" type="tel" placeholder="Enter your phone number" required aria-required="true">
+						<div class="error" id="err-phone" aria-live="polite"></div>
+					</div>
+
+					<div class="form-group">
+						<label for="pharmacyName">Pharmacy Name <span class="required">*</span></label>
+						<input id="pharmacyName" name="pharmacyName" type="text" placeholder="Enter your pharmacy name" required aria-required="true">
+						<div class="error" id="err-pharmacyName" aria-live="polite"></div>
+					</div>
+
+					<div class="form-group">
+						<label for="pharmacyAddress">Pharmacy Address <span class="required">*</span></label>
+						<input id="pharmacyAddress" name="pharmacyAddress" type="text" placeholder="Enter your pharmacy address" required aria-required="true">
+						<div class="error" id="err-pharmacyAddress" aria-live="polite"></div>
+					</div>
+
+					<div class="form-group">
+						<label for="jobTitle">Job Title</label>
+						<input id="jobTitle" name="jobTitle" type="text" placeholder="Enter your job title">
+						<div class="error" id="err-jobTitle" aria-live="polite"></div>
+					</div>
+
+					<div class="form-group">
+						<label for="pharmacySize">Pharmacy Size</label>
+						<select id="pharmacySize" name="pharmacySize" aria-label="Pharmacy Size">
+							<option value="">-- Select size --</option>
+							<option value="small">Small (1-5 staff)</option>
+							<option value="medium">Medium (6-20 staff)</option>
+							<option value="large">Large (20+ staff)</option>
+						</select>
+						<div class="error" id="err-pharmacySize" aria-live="polite"></div>
+					</div>
+
+					<div class="form-group full-width">
+						<label for="needs">Your Needs</label>
+						<textarea id="needs" name="needs" placeholder="Share your pharmacy’s challenges or specific requirements..."></textarea>
+						<div class="error" id="err-needs" aria-live="polite"></div>
+					</div>
+				</div>
+
+				<div class="submit-row">
+					<button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+					<button type="submit" class="btn btn-primary" id="submitBtn">Register</button>
+				</div>
+			</form>
+		</div>
+        
+	</main>
+
+	<footer>
+		<div class="footer">
+    <p>&copy; 2025 PharmaSync Ltd. All rights reserved.</p>
+    <p>Contact us: contact.pharmasync@gmail.com | +8801716008149</p>
+</div>
+	</footer>
+
+	<script src=""></script>
+</body>
+</html>

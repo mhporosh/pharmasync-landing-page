@@ -11,6 +11,9 @@
 <body>
     <header>
         <div class="nav">
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
       <div class="logo">
         <h1>PharmaSync</h1>
       </div>
@@ -47,14 +50,17 @@
 
     <main>
         <div class="hero">
-            <h2>
-            Manage Pharmacy Smartly
-        </h2>
-        <input type="submit" value="Explore" id="explore-button">
-        <div class="login-reg">
-          <a href="login.html"><input type="button" value="Login"></a>
-          <a href="./registration.html"><input type="button" value="Registration"></a>
-        </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-inner">
+                <div class="hero-card">
+                    <h2>Manage Pharmacy Smartly</h2>
+                    <p class="hero-sub">PharmaSync helps you run your pharmacy — inventory, billing, prescriptions and reporting in one place.</p>
+                    <div class="hero-ctas">
+                      <a href="#more-features" class="btn btn-primary">Explore</a>
+                      <a href="login.html" class="btn btn-secondary">Login</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <h2>Pages & Features List</h2>

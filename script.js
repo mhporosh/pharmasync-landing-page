@@ -70,6 +70,38 @@
 			});
 		})();
 
+		// Mobile nav toggle
+		(function () {
+			const navToggle = document.getElementById('navToggle');
+			if (!navToggle) return;
+
+			function openNav() {
+				document.body.classList.add('nav-open');
+				navToggle.setAttribute('aria-expanded', 'true');
+			}
+
+			function closeNav() {
+				document.body.classList.remove('nav-open');
+				navToggle.setAttribute('aria-expanded', 'false');
+			}
+
+			navToggle.addEventListener('click', function (e) {
+				e.stopPropagation();
+				if (document.body.classList.contains('nav-open')) closeNav(); else openNav();
+			});
+
+			// Close when clicking outside the nav panel
+			document.addEventListener('click', function (e) {
+				const links = document.querySelector('.links');
+				if (!links) return;
+				if (!links.contains(e.target) && !navToggle.contains(e.target)) closeNav();
+			});
+
+			document.addEventListener('keydown', function (e) {
+				if (e.key === 'Escape') closeNav();
+			});
+		})();
+
 
 	(function () {
 		const btn = document.getElementById('profileBtn');

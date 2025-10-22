@@ -1,5 +1,7 @@
 (function () {
 			const form = document.getElementById('regForm');
+			// If there's no registration form on this page, skip registration handlers
+			if (!form) return;
 			const fields = {
 				fullName: {el: document.getElementById('fullName'), err: document.getElementById('err-fullName')},
 				phone: {el: document.getElementById('phone'), err: document.getElementById('err-phone')},
@@ -49,11 +51,11 @@
 			form.addEventListener('submit', function (e) {
 				e.preventDefault();
 				if (validate()) {
-					// For demo: show a success message. Replace with real submission logic.
+					
 					alert('Registration successful — thank you!');
 					form.reset();
 				} else {
-					// focus first invalid field
+					
 					const firstErr = document.querySelector('.error:not(:empty)');
 					if (firstErr) {
 						const input = firstErr.previousElementSibling;
@@ -67,3 +69,68 @@
 				window.location.href = 'index.html';
 			});
 		})();
+
+
+	(function () {
+		const btn = document.getElementById('profileBtn');
+		const menu = document.getElementById('profileMenu');
+
+		if (!btn || !menu) return;
+
+		function openMenu() {
+			menu.classList.add('show');
+			btn.setAttribute('aria-expanded', 'true');
+			menu.setAttribute('aria-hidden', 'false');
+			document.body.classList.add('menu-open');
+		}
+
+		function closeMenu() {
+			menu.classList.remove('show');
+			btn.setAttribute('aria-expanded', 'false');
+			menu.setAttribute('aria-hidden', 'true');
+			document.body.classList.remove('menu-open');
+		}
+
+		btn.addEventListener('click', function (e) {
+			e.stopPropagation();
+			if (menu.classList.contains('show')) closeMenu(); else openMenu();
+		});
+
+	
+		document.addEventListener('click', function (e) {
+			if (!menu.contains(e.target) && !btn.contains(e.target)) closeMenu();
+		});
+
+	
+		document.addEventListener('keydown', function (e) {
+			if (e.key === 'Escape') closeMenu();
+		});
+	})();
+
+	(function () {
+		const expandBtn = document.getElementById('expand-button');
+		const content = document.querySelector('.features-content');
+		if (!expandBtn || !content) return;
+
+		function open() {
+			expandBtn.setAttribute('aria-expanded', 'true');
+			content.classList.add('open');
+			
+			content.style.maxHeight = content.scrollHeight + 'px';
+		}
+
+		function close() {
+			expandBtn.setAttribute('aria-expanded', 'false');
+	
+			content.style.maxHeight = content.scrollHeight + 'px';
+			requestAnimationFrame(() => {
+				content.style.maxHeight = '0px';
+			});
+			content.classList.remove('open');
+		}
+
+		expandBtn.addEventListener('click', function () {
+			const expanded = expandBtn.getAttribute('aria-expanded') === 'true';
+			if (expanded) close(); else open();
+		});
+	})();

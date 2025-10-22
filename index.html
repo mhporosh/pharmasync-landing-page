@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PharmaSync</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+  <script src="https://kit.fontawesome.com/d3e9fb9ce3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -29,7 +31,16 @@
         <a href="">Contact</a>
       </div>
       <div class="profile">
-        <img src="images/profile.png" alt="profile" height="30px">
+        <button id="profileBtn" class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-label="Open profile menu">
+          <i class="fas fa-user-circle"></i>
+        </button>
+        <div id="profileMenu" class="profile-menu" role="menu" aria-hidden="true">
+          <a href="login.html" role="menuitem">Login / Signup</a>
+          <a href="registration.html" role="menuitem">Register</a>
+          <a href="#" role="menuitem">Profile</a>
+          <a href="#" role="menuitem">Dashboard</a>
+          <a href="#" role="menuitem">Help</a>
+        </div>
       </div>
     </div>
     </header>
@@ -50,20 +61,20 @@
 
         <div class="cards">
       <div class="card">
-        <img src="./images/medicine.jpg" alt="medicine" />
+        <div class="card-icon"><i class="fas fa-tachometer-alt"></i></div>
         <h4>Dashboard</h4>
         <p>
          Overview of your pharmacy operations and quick stats.
         </p>
       </div>
       <div class="card">
-        <img src="./images/medicine.jpg" alt="medicine" />
+        <div class="card-icon"><i class="fas fa-store"></i></div>
         <h4>Stores</h4>
         <p>
          View and manage all your stores.</p>
       </div>
       <div class="card">
-        <img src="./images/medicine.jpg" alt="medicine" />
+        <div class="card-icon"><i class="fas fa-boxes"></i></div>
         <h4>Stores Items</h4>
         <p>
           Browse and control items in each store.
@@ -75,19 +86,19 @@
 
         <div class="cards">
       <div class="card">
-        <img src="./images/medicine.jpg" alt="medicine" />
+        <div class="card-icon"><i class="fas fa-store-alt"></i></div>
         <h4>Store Details</h4>
         <p>
          Detailed information about a specific store.</p>
       </div>
       <div class="card">
-        <img src="./images/medicine.jpg" alt="medicine" />
+        <div class="card-icon"><i class="fas fa-search"></i></div>
         <h4>Store Item Details</h4>
         <p>
           Track item details within a store.</p>
       </div>
       <div class="card">
-        <img src="./images/medicine.jpg" alt="medicine" />
+        <div class="card-icon"><i class="fas fa-hourglass-end"></i></div>
         <h4>Expired Products</h4>
         <p>
           Monitor expired products in your inventory.
@@ -100,27 +111,134 @@
 
         <div class="cards">
       <div class="card">
-        <img src="./images/medicine.jpg" alt="medicine" />
-        <h4>Productss</h4>
+        <div class="card-icon"><i class="fas fa-pills"></i></div>
+        <h4>Products</h4>
         <p>
           List and search all available products.</p>
       </div>
       <div class="card">
-        <img src="./images/medicine.jpg" alt="medicine" />
+        <div class="card-icon"><i class="fas fa-vials"></i></div>
         <h4>Product Details</h4>
         <p>
           View detailed information for each product.
           </p>
       </div>
       <div class="card">
-        <img src="./images/medicine.jpg" alt="medicine" />
+        <div class="card-icon"><i class="fas fa-plus"></i></div>
         <h4>Add Product</h4>
         <p>
           Add or edit product information.
         </p>
       </div>
     </div>
-    <input type="submit" value="More" id="expand-button">
+    <div class="expand-wrap">
+      <button id="expand-button" class="expand-btn" aria-expanded="false" aria-controls="more-features">More <i class="fas fa-chevron-down"></i></button>
+    </div>
+
+    <section id="more-features" class="features-section">
+      <div class="features-content">
+      <h2>More Features</h2>
+      <p class="note" style="text-align:center; max-width:900px; margin:8px auto 18px;">A quick overview of other features PharmaSync provides to help you run your pharmacy efficiently.</p>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-boxes"></i></div>
+          <h5>Inventory Management</h5>
+          <p>Track stock levels, batches and locations across stores.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-hourglass-end"></i></div>
+          <h5>Expiry Tracking</h5>
+          <p>Detect expiring items and reduce losses with alerts.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+          <h5>Purchase Orders</h5>
+          <p>Create and manage purchase orders with suppliers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-cash-register"></i></div>
+          <h5>Sales & Billing</h5>
+          <p>Fast billing, receipts and transaction history.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-store-alt"></i></div>
+          <h5>Multi-Store Support</h5>
+          <p>Manage multiple branches and transfer stock easily.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+          <h5>User Roles</h5>
+          <p>Granular permissions for pharmacists, managers and staff.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+          <h5>Reports & Analytics</h5>
+          <p>Sales, stock and performance reports with charts.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-barcode"></i></div>
+          <h5>Barcode Scanning</h5>
+          <p>Quick item lookup and faster checkout with scanners.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-bell"></i></div>
+          <h5>Stock Alerts</h5>
+          <p>Low-stock notifications so you never run out.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-truck"></i></div>
+          <h5>Supplier Management</h5>
+          <p>Keep supplier contacts, pricing and order history.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-tag"></i></div>
+          <h5>Pricing & Discounts</h5>
+          <p>Flexible pricing, promotions and bundled offers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-prescription-bottle-alt"></i></div>
+          <h5>Prescription Management</h5>
+          <p>Record and track prescriptions and refills securely.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+          <h5>Batch/Lot Tracking</h5>
+          <p>Trace items by batch/lot for recalls and audits.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-clipboard-list"></i></div>
+          <h5>Audit Logs</h5>
+          <p>View changes, user actions and system history.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-plug"></i></div>
+          <h5>Integrations & API</h5>
+          <p>Connect to accounting, POS and third-party tools.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h5>Mobile Access</h5>
+          <p>Use PharmaSync on mobile devices for on-the-go tasks.</p>
+        </div>
+      </div>
+      </div>
+    </section>
 
     </main>
 
@@ -133,5 +251,6 @@
     </footer>
        
     </div>
+  <script src="script.js"></script>
 </body>
 </html>

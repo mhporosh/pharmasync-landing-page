@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PharmaSync — Login</title>
-    <link rel="stylesheet" href="style.css">
+   <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PharmaSync — Login</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="responsive.css">
+   <script src="https://kit.fontawesome.com/d3e9fb9ce3.js" crossorigin="anonymous"></script>
  </head>
 <body>
     <header>
@@ -29,7 +31,16 @@
         <a href="#">Contact</a>
       </div>
       <div class="profile">
-        <img src="images/profile.png" alt="profile" height="30px">
+        <button id="profileBtn" class="profile-btn" aria-haspopup="true" aria-expanded="false" aria-label="Open profile menu">
+          <i class="fas fa-user-circle"></i>
+        </button>
+        <div id="profileMenu" class="profile-menu" role="menu" aria-hidden="true">
+          <a href="login.html" role="menuitem">Login / Signup</a>
+          <a href="registration.html" role="menuitem">Register</a>
+          <a href="#" role="menuitem">Profile</a>
+          <a href="#" role="menuitem">Dashboard</a>
+          <a href="#" role="menuitem">Help</a>
+        </div>
       </div>
     </div>
     </header>
@@ -76,7 +87,8 @@
     <p>Contact us: contact.pharmasync@gmail.com | +8801716008149</p>
 </div>
 
-    </footer>
+  </footer>
        
+  <script src="script.js"></script>
 </body>
 </html>
